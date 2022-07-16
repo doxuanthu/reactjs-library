@@ -17,6 +17,11 @@ $blue-color: rgb(65, 101, 220);
   }
 }
 
+@mixin textOverFlow {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .landing-page {
   display: grid;
 
@@ -31,8 +36,7 @@ $blue-color: rgb(65, 101, 220);
     .travel-agency {
       & > span {
         font-weight: 700;
-        font-size: 3.6rem;
-        line-height: $h-header;
+        font-size: clamp(1rem, 2vw, 3rem);
       }
 
       & > span:first-child {
@@ -44,8 +48,13 @@ $blue-color: rgb(65, 101, 220);
       }
     }
 
+    .connect-social {
+      font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+      @include textOverFlow();
+    }
+
     .icon {
-      font-size: 2.6rem;
+      font-size: clamp(1rem, 2vw, 2.6rem);
       margin: 0 6px;
       cursor: pointer;
     }
@@ -57,7 +66,6 @@ $blue-color: rgb(65, 101, 220);
       background-color: $lgreen-color;
       height: 100%;
       padding: 0 20px;
-      //   margin: 0 auto;
       transition: all 0.3s ease;
 
       &:hover {
@@ -67,7 +75,7 @@ $blue-color: rgb(65, 101, 220);
       }
 
       .phone-icon {
-        font-size: 2.6rem;
+        font-size: clamp(1rem, 2vw, 2.6rem);
         transform: rotate(-45deg);
         margin: 0 12px 0 0;
       }
@@ -79,13 +87,15 @@ $blue-color: rgb(65, 101, 220);
         }
 
         & > p:first-child {
-          font-size: 1.5rem;
+          font-size: clamp(1rem, 1.2vw, 1.5rem);
           font-weight: 500;
           letter-spacing: -1px;
+          @include textOverFlow();
         }
 
         & > p:nth-child(2) {
-          font-size: 2.4rem;
+          font-size: clamp(1rem, 1.2vw, 2.4rem);
+          @include textOverFlow();
           font-weight: 700;
         }
       }
@@ -110,12 +120,14 @@ $blue-color: rgb(65, 101, 220);
       & > h3 {
         font-weight: 400;
         letter-spacing: -2px;
+        font-size: clamp(1rem, 6vw, 4rem);
       }
 
       & > h1 {
-        font-size: 6rem;
+        font-size: clamp(1rem, 8vw, 5rem);
         font-weight: 700;
         color: $white-color;
+        @include textOverFlow();
       }
 
       .get-offer {
@@ -123,6 +135,7 @@ $blue-color: rgb(65, 101, 220);
         background-color: orange;
         padding: 16px 12px;
         border-radius: 2px;
+        font-size: clamp(0.6rem, 1vw, 1.6rem);
       }
     }
   }
@@ -140,13 +153,27 @@ $blue-color: rgb(65, 101, 220);
       margin: 0 auto;
     }
 
-    button {
+    @media screen and (max-width: 560px) {
+      .list-opt {
+        flex-direction: column;
+
+        a {
+          margin: 8px 0;
+        }
+      }
+    }
+
+    a {
       @extend %buttonStyle;
-      font-size: 2rem;
+      font-size: clamp(1rem, 2vw, 2rem);
       width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .icon {
-        font-size: 3rem;
+        font-size: clamp(2rem, 3vw, 3rem);
+        margin-right: 8px;
       }
     }
 
