@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 12px;
+}
+
+.form-group {
+  padding: 24px;
+  margin-top: 16px;
+  border: 1px solid #ccc;
+  position: relative;
+
+  &::before {
+    content: "Thêm thông tin Balo mới";
+    display: block;
+    height: 16px;
+    padding: 0 6px;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    top: -12px;
+    left: 10%;
+  }
+
+  .add-btn {
+    width: 120px;
+    margin: 8px 0 0 8px;
+  }
+}
+
+.table-container {
+  .action-btn {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .edit-icon {
+    color: chartreuse;
+    margin-right: 12px;
+  }
+
+  .remove-icon {
+    color: rgb(205, 58, 58);
+  }
+
+  .image {
+    max-width: 100px;
+  }
+}

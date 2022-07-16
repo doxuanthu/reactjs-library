@@ -1,0 +1,48 @@
+.wrapper {
+  height: 100vh;
+  background: url(https://media.istockphoto.com/photos/cartoon-character-flys-through-the-air-on-top-of-a-rocket-picture-id1311329333?b=1&k=20&m=1311329333&s=170667a&w=0&h=7a6CmPPn4NZpdhRfkMrakFW6k6FcZTON0at-2Zygp3s=)
+      left top no-repeat,
+    url(https://media.istockphoto.com/photos/rocket-picture-id1305055203?b=1&k=20&m=1305055203&s=170667a&w=0&h=FkqVGnN0ZQbbM6ODZOBhj2O5f0vcjk8ODCNgUwR7rh4=)
+      left top repeat;
+
+  color: var(--white-color);
+
+  .minutes,
+  .seconds {
+    font-size: 10rem;
+    margin: 0 24px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+  }
+  .seconds {
+    color: rgb(247, 81, 108);
+  }
+
+  .sub-title {
+    font-size: 5rem;
+    cursor: text;
+    color: var(--white-color);
+    font-weight: 500;
+  }
+}
+
+.edit-box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,19 @@
+.tour {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translate(0, -3px);
+  }
+}
+
+.location {
+  font-weight: 600;
+  color: rgb(42, 165, 42);
+}
+
+.country {
+  font-size: 2rem;
+}
