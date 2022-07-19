@@ -1,37 +1,39 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { useSelector } from "react-redux";
-import { validUser } from "./store/selector";
-
-import {
-  Home,
-  TodoList,
-  Login,
-  Register,
-  User,
-  Calculator,
-} from "./components/pages";
+import { Fragment, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { publicRoutes } from "./routes/routes";
+import fakeServer from "./miragejs";
+import { getFilms } from "./pages/JazzMovies/moviesSlice";
 
 function App() {
-  const user = useSelector(validUser);
-  console.log({ user });
+  if (process.env.NODE_ENV === "development") {
+    fakeServer();
+  }
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getFilms());
+  }, [dispatch]);
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/todolist" element={<TodoList />} />
-        <Route
-          path="/login"
-          element={user ? <Navigate to="/user" replace /> : <Login />}
-        />
-        <Route path="/user" element={<User />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/calculator" element={<Calculator />} />
+        {publicRoutes.map((route, index) => {
+          let Layout = Fragment;
+          if (route.layout) {
+            Layout = route.layout;
+          }
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <route.component />
+                </Layout>
+              }
+            />
+          );
+        })}
       </Routes>
     </Router>
   );
