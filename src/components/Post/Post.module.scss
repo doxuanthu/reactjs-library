@@ -1,0 +1,73 @@
+.post {
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  max-width: 800px;
+
+  .auth-info {
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+
+    .left {
+      padding-right: 32px;
+
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 8px;
+        color: var(--text-color);
+        display: block;
+      }
+
+      .description {
+        margin: 6px 0 14px;
+        line-height: 1.8rem;
+        max-height: 5.4rem;
+        overflow: hidden;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        color: #505050;
+      }
+    }
+
+    .right {
+      img {
+        width: 200px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .post-footer {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+
+    button {
+      background-color: #f2f2f2;
+      border: none;
+      outline: none;
+      border-radius: 100px;
+      color: #333;
+      font-weight: 500;
+      line-height: 2rem;
+      margin-right: 12px;
+      padding: 4px 10px;
+    }
+
+    .createdAt {
+      margin-bottom: 0;
+    }
+  }
+}

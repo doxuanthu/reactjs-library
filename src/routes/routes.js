@@ -1,36 +1,25 @@
-import Home from "../pages/Home/Home";
-import JazzMovies, {
-  TvShow,
-  Trailer,
-  TvShowTrailer,
-} from "../pages/JazzMovies";
-import LandingPage from "../pages/LandingPage";
-import Ecommerce from "../pages/Ecommerce";
-import { JazzMoviesLayout } from "../layouts";
+import { Home, Posts, NewPost, PostDetail, Calculator } from "../pages";
+import { PostsLayout, NewPostLayout, PostDetailLayout } from "../layouts";
 export const publicRoutes = [
   { path: "/", component: Home },
   {
-    path: "/tv-show",
-    component: TvShow,
-    layout: JazzMoviesLayout,
-  },
-  { path: "/jazzmovies", component: JazzMovies, layout: JazzMoviesLayout },
-  {
-    path: "/trailer/:id",
-    component: Trailer,
-    layout: JazzMoviesLayout,
+    path: "/posts",
+    component: Posts,
+    layout: PostsLayout,
   },
   {
-    path: "/tvshow/:id",
-    component: TvShowTrailer,
-    layout: JazzMoviesLayout,
+    path: "/new-post",
+    component: NewPost,
+    layout: NewPostLayout,
   },
   {
-    path: "/landing-page",
-    component: LandingPage,
+    path: "/posts/:id",
+    component: PostDetail,
+    layout: PostDetailLayout,
   },
   {
-    path: "/ecommerce",
-    component: Ecommerce,
+    path: "/calculator",
+    component: Calculator,
+    layout: null,
   },
 ];

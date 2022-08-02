@@ -1,6 +1,12 @@
-/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 @import 'antd/dist/antd.css';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --h-header: 66px;
+    --text-color: #272727;
+    --main-color: #1473e6
+}
+
 
 * {
     padding: 0;
@@ -14,8 +20,9 @@ html {
 
 body {
     font-size: 1.6rem;
+    color: var(--text-color);
     font-family: "Montserrat", sans-serif;
- 
+    
 }
 
 html *::-webkit-scrollbar {
@@ -33,100 +40,19 @@ html *::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.wrapper {
-    padding: 36px;
+body .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused),
+body .ck.ck-toolbar.ck-toolbar_grouping
+{
+    border-color: transparent;
 }
 
-/* custom css of antd */
-.ant-input::placeholder {
-    color: #333;
+body .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused):focus-visible {
+    border-color: transparent;
+    outline: none;
 }
 
-.ant-btn {
-    font-weight: 500;
-    font-size: 2rem;
+body .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+    border: none;
+    box-shadow: var(--ck-inner-shadow),0 0;
+    outline: none;
 }
-
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: -6px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #59f321;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .LandingPage_pages__V3xw7 .LandingPage_page__6nla0.active {
-    width: 10px;
-    height: 10px;
-  } 
-
-  .ant-carousel {
-    width: 80vw;
-    height: 100%;
-    background-color: rgb(23, 99, 134);
-    color: #fff;
-  }
-
-  .ant-card-body{
-    padding-top: 0;
-  }

@@ -1,0 +1,15 @@
+.wrapper {
+  .header {
+    height: var(--h-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .content {
+    max-width: 1200px;
+    padding: 8px 24px;
+    margin: var(--h-header) auto;
+  }
+}

@@ -1,20 +1,16 @@
-import React from "react";
 import className from "classnames/bind";
-import { Link } from "react-router-dom";
 import styles from "./Home.module.scss";
+import { Link } from "react-router-dom";
 
 const cx = className.bind(styles);
 function Home() {
   return (
     <div className={cx("wrapper")}>
-      <Link className={cx("button")} to="/jazzmovies">
-        Exercise 1
+      <Link to="/posts" className={cx("first-btn")}>
+        Blogs App
       </Link>
-      <Link className={cx("button", "middle")} to="/landing-page">
-        Exercise 2
-      </Link>
-      <Link className={cx("button")} to="/ecommerce">
-        Exercise 3
+      <Link to="/calculator" className={cx("second-btn")}>
+        Calculator
       </Link>
     </div>
   );
