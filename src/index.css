@@ -114,3 +114,19 @@ html *::-webkit-scrollbar-track {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  .LandingPage_pages__V3xw7 .LandingPage_page__6nla0.active {
+    width: 10px;
+    height: 10px;
+  } 
+
+  .ant-carousel {
+    width: 80vw;
+    height: 100%;
+    background-color: rgb(23, 99, 134);
+    color: #fff;
+  }
+
+  .ant-card-body{
+    padding-top: 0;
+  }
