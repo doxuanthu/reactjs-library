@@ -1,0 +1,39 @@
+.wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px 18px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .result {
+      font-size: 8rem;
+    }
+
+    .form-group {
+      input {
+        outline: none;
+        border: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .generate-btn {
+    width: 100%;
+    padding: 8px 0;
+    color: #fff;
+    background-color: #1890ff;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

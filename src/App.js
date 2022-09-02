@@ -1,23 +1,24 @@
-import Exercise1 from "./components/lab-01/exercise-1";
-import Exercise2 from "./components/lab-01/exercise-2";
-import Exercise3 from "./components/lab-01/exercise-3";
-
-import Ex1 from "./components/lab-02/exercise-1";
-import Game from "./components/lab-02/exercise-2";
-import Ex3 from "./components/lab-02/exercise-3";
+import Calculator from "./components/lab-03/exercise-01/Calculator";
+import Ex2 from "./components/lab-03/exercise-02";
+import Ex3 from "./components/lab-03/exercise-03";
+import Exercise1 from "./components/lab-04/exercise-01";
+import Exercise2 from "./components/lab-04/exercise-02";
+import Tiles from "./components/lab-04/exercise-03";
 
 function App() {
   return (
     <div className="App">
-      {/* ------lab-1------ */}
+      {/* Lab 03 */}
+      <Calculator />
+      <Ex2 />
+      <Ex3 />
+      {/* ----------- */}
+
+      {/* Lab 04 */}
+      <div className="separator"></div>
       <Exercise1 />
       <Exercise2 />
-      <Exercise3 />
-      {/* ----------------- */}
-
-      <Ex1 />
-      <Game />
-      <Ex3 />
+      <Tiles />
     </div>
   );
 }
