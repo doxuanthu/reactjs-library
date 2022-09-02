@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -11,14 +11,15 @@ import {
   faPlaneUp,
   faHotel,
 } from "@fortawesome/free-solid-svg-icons";
-import "./exercise2.scss";
+import "./Travel.scss";
+import { Link } from "react-router-dom";
 
-function Exercise2() {
+function Travel() {
   return (
     <Container fluid className="landing-page-wrapper p-0 ">
       <div className="landing-page">
         <header className="header fixed-top">
-          <Row className="h-100 ">
+          <Row className="h-100 align-items-center">
             <Col xs={{ span: 2, offset: 2 }} className="travel-agency">
               <span>Travel</span> <span>Agency</span>
             </Col>
@@ -26,15 +27,11 @@ function Exercise2() {
               xs={{ span: 2, offset: 2 }}
               className="d-flex align-items-center h-100"
             >
-              <span>Connect with us: </span>
+              <span className="connect-social">Connect with us: </span>
               <FontAwesomeIcon className="icon" icon={faFacebook} />
               <FontAwesomeIcon className="icon" icon={faTwitterSquare} />
             </Col>
-            <Col
-              xs={{ span: 2, offset: 0 }}
-              //   xs={{ span: 3 }}
-              className="contact-block"
-            >
+            <Col xs={{ span: 2, offset: 0 }} className="contact-block">
               <FontAwesomeIcon className="phone-icon" icon={faPhoneVolume} />
               <div className="contact-block--content">
                 <p>Call us for More Information</p>
@@ -58,16 +55,16 @@ function Exercise2() {
           </div>
         </section>
         <section className="options">
-          <div className="">
-            <button className="consulting-btn">
+          <div className="list-opt">
+            <Link to="consulting" className="consulting-btn">
               <FontAwesomeIcon className="icon" icon={faComments} /> CONSULTING
-            </button>
-            <button className="travel-guide-btn">
+            </Link>
+            <Link to="guide" className="travel-guide-btn">
               <FontAwesomeIcon className="icon" icon={faPlaneUp} /> TRAVEL GUIDE
-            </button>
-            <button className="hotel-info-btn">
+            </Link>
+            <Link to="hotel-info" className="hotel-info-btn">
               <FontAwesomeIcon className="icon" icon={faHotel} /> HOTEL INFO
-            </button>
+            </Link>
           </div>
         </section>
         <section className="main-title">
@@ -78,7 +75,6 @@ function Exercise2() {
           </p>
         </section>
         <section className="offers">
-          {/* <CardGroup className="card-group"> */}
           <Card className="offer">
             <Card.Img
               variant="top"
@@ -127,7 +123,6 @@ function Exercise2() {
               </Card.Text>
             </Card.Body>
           </Card>
-          {/* </CardGroup> */}
         </section>
         <footer className="footer">
           <small>&#169; Copyright 2016-2017.All Rights Reserved</small>
@@ -138,4 +133,4 @@ function Exercise2() {
   );
 }
 
-export default Exercise2;
+export default Travel;

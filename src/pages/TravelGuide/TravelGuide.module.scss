@@ -1,0 +1,45 @@
+.wrapper {
+  height: 100vh;
+  background-color: lightblue;
+  background-image: url("https://img2.goodfon.com/wallpaper/nbig/9/3c/hill-top-grass-flowers-sunny-spring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  flex-direction: column;
+  color: var(--white-color);
+
+  .title {
+    font-size: clamp(1rem, 4vw, 3rem);
+    margin: 12px 0 36px;
+  }
+
+  .search {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 0px 30px 0 12px;
+      border-radius: 2px;
+      outline: none;
+      border: 1px solid #ccc;
+      background-color: transparent;
+      text-align: center;
+      color: var(--white-color);
+
+      &::placeholder {
+        color: var(--white-color);
+      }
+    }
+
+    .search-icon {
+      color: var(--white-color);
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,14 +1,32 @@
-import Exercise1 from "./components/lab-05/exercise-1/Exercise1";
-import Exercise2 from "./components/lab-05/exercise-2/Exercise2";
-import Exercise3 from "./components/lab-05/exercise-3/Exercise3";
+import { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes/routes";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Exercise1 />
-      <Exercise2 />
-      <Exercise3 /> */}
-    </div>
+    <Router>
+      <Routes>
+        {publicRoutes.map((route, index) => {
+          let Layout;
+          if (route.layout) {
+            Layout = route.layout;
+          } else if (route.layout === null) {
+            Layout = Fragment;
+          }
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <route.component />
+                </Layout>
+              }
+            />
+          );
+        })}
+      </Routes>
+    </Router>
   );
 }
 
